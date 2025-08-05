@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>free fire id buy and sell</title>
+  <style>
+    body {
+      background: url(c.jpg) center fixed no-repeat;
+      background-size: cover;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 25px;
+      font-weight: bold;
+      color: rgb(255, 242, 62);
+      margin: 8px;
+    }
+    .header {
+      background-color: antiquewhite;
+      color: hsl(310, 100%, 50%);
+      padding: 10px;
+      height: 50px;
+    }
+    .bg {
+      background: url(c.jpg) no-repeat fixed center;
+      width: 700px;
+      height: 900px;
+      margin: auto;
+      border: double 10px aquamarine;
+      border-radius: 30px;
+    }
+    .cen {
+      font-size: 50px;
+      text-align: center;
+      color: rgb(115, 255, 0);
+    }
+    .cent {
+      font-size: 25px;
+      font-style: italic;
+      text-align: center;
+      color: rgb(235, 53, 241);
+    }
+    .ta {
+      background: url(b.jpg) no-repeat fixed center;
+      width: 600px;
+      height: 330px;
+      margin: auto;
+      border: solid 5px aquamarine;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgb(0, 255, 115);
+      border-radius: 200px;
+      padding: 5px;
+      display: block;
+      margin: auto;
+    }
+    input {
+      font-size: 30px;
+      text-align: center;
+      margin: 10px 20%;
+      padding: 2px;
+      background-color: rgb(254, 254, 255);
+      color: aquamarine;
+    }
+    input[type="submit"] {
+      font-size: 40px;
+      text-align: center;
+      color: rgb(253, 20, 32);
+      margin: 0px 35%;
+      padding: 2px;
+      border-radius: 20px;
+      border: 2px solid yellow;
+      background-color: rgb(0, 0, 0);
+      margin-top: 10%;
+    }
+    a {
+      font-size: 30px;
+      color: deeppink;
+      position: fixed;
+      top: 6px;
+    }
+    a:active {
+      color: aqua;
+      background-color: blueviolet;
+      border: 2px solid yellow;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="email"], input[type="password"], input[type="submit"] {
+      padding: 15px;
+      font-size: 18px;
+      margin: 10px auto;
+      width: 300px;
+      border-radius: 8px;
+      display: block;
+    }
+    #error {
+      text-align: center;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="web1.html">home</a>
+    <marquee direction="left" style="margin-left: 140px; font-size: 30px;">
+      this website is safe for buy and sale
+    </marquee>
+  </div>
+
+  <div class="bg">
+    <div><img src="a.avif" alt="logo.png"></div>
+    <h1 class="cen">this website is safe for buy and sale</h1>
+    <h1 class="cent">development complete on July</h1>
+
+    <div class="ta">
+      <h2 style="margin: 2% 100px; padding-bottom: 7%; color: coral;">Login to Buy/Sell ID</h2>
+      <form id="loginForm" method="POST" action="login.php" onsubmit="return validateForm()">
+
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+        <input type="submit" value="Login Now">
+        <div id="error"></div>
+      </form>
+    </div>
+  </div>
+
+  <marquee direction="left" style="color: blue; background-color: burlywood; font-size: 40px;">
+    welcome to my website
+  </marquee>
+<script>
+  function validateForm() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const error = document.getElementById('error');
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    // Gmail check
+    if (!emailPattern.test(email)) {
+      error.textContent = "Only valid Gmail addresses are allowed!";
+      return false;
+    }
+
+    // Password check
+    if (password.length < 6) {
+      error.textContent = "Password must be at least 6 characters.";
+      return false;
+    }
+
+    // ✅ সব ঠিক থাকলে web2.html এ নিয়ে যাবে
+    error.textContent = "";
+    window.location.href = "web2.html";
+    return false; // form submit বন্ধ রেখে শুধু redirect
+  }
+</script>
+
+</body>
+</html>

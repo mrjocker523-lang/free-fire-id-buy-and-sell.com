@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Fire Gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #1f1f1f;
+      flex-wrap: wrap;
+    }
+
+    .search-wrapper {
+      position: relative;
+    }
+
+    .search-wrapper input {
+      width: 280px;
+      padding: 10px 40px 10px 15px;
+      border-radius: 25px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    .search-wrapper::before {
+      content: "🔍";
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+    }
+
+    .top-bar button {
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .gallery-item {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+      width: 48%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      padding: 10px;
+      background: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .id-number {
+      font-size: 14px;
+      color: #888;
+      background-color: #111;
+      padding: 6px 10px;
+      font-weight: bold;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #00e676;
+    }
+
+    .buy-btn {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-row {
+        flex-direction: column;
+      }
+
+      .gallery-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="background-color: #fa0879; width: fit-content; margin-left: 10px; padding: 0px;"><a href="web2.html" style="color: #090df5;"> back </a></h1>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search here...">
+    </div>
+    <button onclick="alert('Link this to your Sell Page')"><a href="https://t.me/+y_W5a6O9GFBkMjM1">🛒 Sell</button></a>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery" id="gallery">
+    
+    <!-- Gallery Rows (ID 1 to 10) -->
+    <!-- Repeat the same pattern: image left, video right -->
+
+    <!-- Row 1 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 1</div>
+        <img src="ffimg1.png" alt="Image 1">
+        <div class="info">
+          <span class="price">৳ 5000</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv1.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 2</div>
+        <img src="ffimg2.png" alt="Image 2">
+        <div class="info">
+          <span class="price">৳ 7000</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv2.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 3</div>
+        <img src="ffimg3.png" alt="Image 3">
+        <div class="info">
+          <span class="price">৳ 3000</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv3.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 4</div>
+        <img src="ffimg4.png" alt="Image 4">
+        <div class="info">
+          <span class="price">৳ 3000</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv4.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 5</div>
+        <img src="ffimg5.png" alt="Image 5">
+        <div class="info">
+          <span class="price">৳ 1000</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv5.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 6 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 6</div>
+        <img src="ffimg6.png" alt="Image 6">
+        <div class="info">
+          <span class="price">৳460</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv6.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 7 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 7</div>
+        <img src="ffimg7.png" alt="Image 7">
+        <div class="info">
+          <span class="price">৳470</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv7.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 8 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 8</div>
+        <img src="ffimg8.png" alt="Image 8">
+        <div class="info">
+          <span class="price">৳480</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv8.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 9 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 9</div>
+        <img src="ffimg9.png" alt="Image 9">
+        <div class="info">
+          <span class="price">৳500</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv9.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- Row 10 -->
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="id-number">#ID: 10</div>
+        <img src="ffimg10.png" alt="Image 10">
+        <div class="info">
+          <span class="price">৳520</span>
+          <a class="buy-btn" href="https://t.me/+ABiHDbI1TollZTNl" target="_blank">Buy</a>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <video src="ffv10.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS: Search -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const galleryRows = document.querySelectorAll('.gallery-row');
+
+    searchInput.addEventListener('input', () => {
+      const value = searchInput.value.toLowerCase();
+      galleryRows.forEach(row => {
+        const text = row.innerHTML.toLowerCase();
+        row.style.display = text.includes(value) ? 'flex' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
